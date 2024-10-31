@@ -14,6 +14,7 @@
         "nav nav nav"
         "latéral main main"
         "footer footer footer"
+        "copy copy copy"
     ;
 }
 #parent header,nav,aside,main,footer{
@@ -23,26 +24,108 @@
 header{
     background-image:url(imgs/video-games-digital-art-subnautica-subnautica-below-zero-science-fiction-hd-wallpaper-preview.jpg);
     grid-area: header;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    padding: 40px;
+}
+header button{
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 255, 0.775);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+h1{
+    color: white;
 }
 nav{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.499);
     grid-area: nav;
 }
-nav ul li{
+nav a{
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    padding-left: -6px;
+    margin-bottom: 5px;
+    color: white;
+
+}
+ul{
+    list-style-type:none;
     text-decoration: none;
 }
+p{
+    text-decoration: none;
+    margin-right: 50px;
+}
+p a:hover {
+    color: #f12c09;
+}
 aside{
-    background-color: yellow;
+    background-color: rgba(0, 0, 255, 0.718);
     grid-area: latéral;
 }
+aside ul{
+    margin-top: 20px;
+    
+}
+aside ul li{
+    margin: 10px 5px;
+    color: white ;
+}
+
 main{
-    background-color: orange;
+    background-color: rgba(0, 4, 255, 0.11);
     grid-area: main;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+main h2{
+    margin-top: 50px;
+}
+main p{
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: medium;
 }
 footer{
-    background-color: red;
+    background-color: rgba(0, 0, 255, 0.499);
     grid-area: footer;
+    padding: 20px;
+}
+footer #reseaux a:hover {
+    color: #007bff;
 }
 nav ul{
     display: flex;
+}
+footer .footer{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+#reseaux a{
+    text-decoration: none;
+    padding: 30px;
+    margin-right: 20px;
+    color: white
+}
+#menue a{
+    text-decoration: none;
+    padding: 30px;
+    margin-right: 20px;
+    color: white;
+}
+#copy p{
+    text-align: center;
+    width: 100%;
+    
+}
+#copy{
+    grid-area: copy;
+    margin-bottom: -10px;
 }
