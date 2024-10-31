@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#parent{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr ;
+    grid-template-rows: 1fr 0fr 6fr 1fr;
+    height: 95vh;
+    grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "latéral main main"
+        "footer footer footer"
+    ;
+}
+#parent header,nav,aside,main,footer{
+    display: flex;
+    justify-content: center;
+}
+header{
+    background-image:url(imgs/video-games-digital-art-subnautica-subnautica-below-zero-science-fiction-hd-wallpaper-preview.jpg);
+    grid-area: header;
+}
+nav{
+    background-color: blue;
+    grid-area: nav;
+}
+nav ul li{
+    text-decoration: none;
+}
+aside{
+    background-color: yellow;
+    grid-area: latéral;
+}
+main{
+    background-color: orange;
+    grid-area: main;
+}
+footer{
+    background-color: red;
+    grid-area: footer;
+}
+nav ul{
+    display: flex;
+}
