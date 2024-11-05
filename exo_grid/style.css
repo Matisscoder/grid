@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-#parent{
+#parent {
     padding: 5px;
     display: grid;
-    grid-template-columns: 200px 1fr 1fr ;
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 1fr 0fr 6fr 1fr;
     height: 95vh;
-    grid-template-areas: 
+    grid-template-areas:
         "header header header"
         "nav nav nav"
         "latéral main main"
@@ -17,19 +17,22 @@
         "copy copy copy"
     ;
 }
-#parent header,nav,aside,main,footer{
+
+#parent header,nav,aside,main,footer {
     display: flex;
     justify-content: center;
 }
-header{
-    background-image:url(imgs/video-games-digital-art-subnautica-subnautica-below-zero-science-fiction-hd-wallpaper-preview.jpg);
+
+header {
+    background-image: url(imgs/video-games-digital-art-subnautica-subnautica-below-zero-science-fiction-hd-wallpaper-preview.jpg);
     grid-area: header;
     align-items: center;
     justify-content: center;
     background-size: cover;
     padding: 40px;
 }
-header button{
+
+header button {
     padding: 8px 16px;
     background-color: rgba(0, 0, 255, 0.775);
     color: white;
@@ -38,14 +41,17 @@ header button{
     cursor: pointer;
     margin: 5px;
 }
-h1{
+
+h1 {
     color: white;
 }
-nav{
+
+nav {
     background-color: rgba(0, 0, 255, 0.499);
     grid-area: nav;
 }
-nav a{
+
+nav a {
     display: block;
     text-decoration: none;
     padding: 14px;
@@ -54,78 +60,100 @@ nav a{
     color: white;
 
 }
-ul{
-    list-style-type:none;
+
+ul {
+    list-style-type: none;
     text-decoration: none;
 }
-p{
+
+p {
     text-decoration: none;
     margin-right: 50px;
 }
+
 p a:hover {
     color: #f12c09;
 }
-aside{
+
+aside {
     background-color: rgba(0, 0, 255, 0.718);
     grid-area: latéral;
-}
-aside ul{
-    margin-top: 20px;
-    
-}
-aside ul li{
-    margin: 10px 5px;
-    color: white ;
+    padding: 15px;
 }
 
-main{
+aside ul {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+
+}
+
+aside ul li {
+    margin: 10px 0;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+
+main {
     background-color: rgba(0, 4, 255, 0.11);
     grid-area: main;
     flex-wrap: wrap;
     padding: 20px;
 }
-main h2{
+
+main h2 {
     margin-top: 50px;
 }
-main p{
+
+main p {
     margin-left: 100px;
     margin-right: 100px;
     font-size: medium;
 }
-footer{
+
+footer {
     background-color: rgba(0, 0, 255, 0.499);
     grid-area: footer;
     padding: 20px;
 }
+
 footer #reseaux a:hover {
     color: #007bff;
 }
-nav ul{
+
+nav ul {
     display: flex;
 }
-footer .footer{
+
+footer .footer {
     display: flex;
     padding: 10px;
     margin: 10px;
 }
-#reseaux a{
+
+#reseaux a {
     text-decoration: none;
     padding: 30px;
     margin-right: 20px;
     color: white
 }
-#menue a{
+
+#menue a {
     text-decoration: none;
     padding: 30px;
     margin-right: 20px;
     color: white;
 }
-#copy p{
+
+#copy p {
     text-align: center;
     width: 100%;
-    
+
 }
-#copy{
+
+#copy {
     grid-area: copy;
 
 }
@@ -140,8 +168,9 @@ form label {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 /** partie bouton **/
-form input, 
+form input,
 form textarea {
     width: 100%;
     padding: 8px;
@@ -151,6 +180,7 @@ form textarea {
     align-content: center;
     margin: right 500px;
 }
+
 form button {
     padding: 8px 16px;
     background-color: rgba(0, 0, 255, 0.499);
@@ -159,4 +189,55 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     margin: 30px;
+}
+
+/** partie reponsive**/
+@media(max-width:768px) {
+    #parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "latéral"
+            "main"
+            "footer"
+            "copy";
+        padding: 10px;
+    }
+    main {
+        padding: 20px;
+        max-width: 800px; 
+        margin: 0 auto; 
+        line-height: 1.6; 
+    }
+    main h2 {
+        font-size: 2em;
+        color: #003366; 
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    main p {
+        font-size: 1em; 
+        margin-left: 0; 
+        margin-right: 0;
+        text-align: justify; 
+    }
+    aside {
+        padding: 10px;
+        max-width: 100%; 
+    }
+    aside ul li {
+        font-size: 0.9em;
+        margin: 8px 0;
+    }
+    footer .footer {
+        text-align: center;
+    }
+    footer a {
+        display: block;
+        margin: -50px;
+    }
+
 }
